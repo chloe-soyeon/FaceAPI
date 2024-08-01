@@ -1,2 +1,12 @@
-package kopo.junsu.dto.response;public class CorrectDTO {
+package kopo.junsu.dto.response;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+public class CorrectDTO {
+    private Boolean correct;
 }

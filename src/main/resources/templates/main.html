@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function quizInfo(level,number) {
+            location.href = "/face/exam?level=" + level + "&number=" + number;
+        }
+    </script>
 </head>
 <body>
-$END$
+<div th:each="quiz : ${quizList}">
+    <div th:attr="onclick=|quizInfo('${quiz.level}', '${quiz.quizNumber}')|">
+        <h3>[[${quiz.level}]] - [[${quiz.quizNumber}]]</h3>
+    </div>
+</div>
+
 </body>
 </html>
