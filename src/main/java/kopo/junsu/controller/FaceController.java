@@ -40,7 +40,10 @@ public class FaceController {
         boolean correct;
 
         QuizDTO quiz = quizService.getQuiz(request);
+        log.info("quiz : DB에서 가져오는 정답 " + quiz.getCorrect());
+        log.info("Face API에서 가져오는 정답 :" + request.getAnswer());
         correct = quiz.getCorrect().equals(request.getAnswer().trim().toUpperCase());
+        log.info( "퀴즈의 정답이 맞는지 : " + correct);
 
         msg.setCorrect(correct);
         return msg;
