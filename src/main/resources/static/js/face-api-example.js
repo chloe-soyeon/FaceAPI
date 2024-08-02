@@ -53,8 +53,8 @@ async function onPlay() {
 
             if (noseX < overlay.width / 2 && lastPostion !== 'left') {
                 lastPostion = 'left';
-                alert('선택한 답 : 0');
-                sendAnswer('0');
+                alert('선택한 답 : O');
+                sendAnswer('O');
             } else if (noseX >= overlay.width / 2 && lastPostion !== 'right') {
                 lastPostion = 'right';
                 alert('선택한 답 : X');
